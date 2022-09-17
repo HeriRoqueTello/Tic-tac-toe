@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&family=Roboto&display=swap');
+:root {
+  --main-color: #00c9a7;
+  --main-color-dark: #4d8076;
+  --main-color-light: #c4fcefbd;
+  --secondary-color: #845ec2;
+  --secondary-color-dark: #3e207c;
+  --secondary-color-light: #b39cd0;
+  --white: #ffffff;
+  --dark: #232830;
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.section-container {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(30deg, #f07dea, #a460ed, #9fc9f3, #eeeeee, #9fc9f3, #a460ed, #f07dea);
+}
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 350px;
+  background-color: #181818;
+}
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.6rem;
+  justify-self: center;
+  text-transform: uppercase;
+  color: var(--white);
+  margin: 30px 0 30px 0;
+}
+.game-container {
+  display: grid;
+  grid-template-areas: 'primero segundo tercero' 'cuarto quinto sexto' 'septimo octavo noveno';
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.square-game {
+  display: grid;
+  place-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--main-color-light);
+}
+
+.square1 {
+  grid-area: primero;
+  cursor: pointer;
+}
+.square2 {
+  grid-area: segundo;
+  cursor: pointer;
+}
+.square3 {
+  grid-area: tercero;
+  cursor: pointer;
+}
+.square4 {
+  grid-area: cuarto;
+  cursor: pointer;
+}
+.square5 {
+  grid-area: quinto;
+  cursor: pointer;
+}
+.square6 {
+  grid-area: sexto;
+  cursor: pointer;
+}
+.square7 {
+  grid-area: septimo;
+  cursor: pointer;
+}
+.square8 {
+  grid-area: octavo;
+  cursor: pointer;
+}
+.square9 {
+  grid-area: noveno;
+  cursor: pointer;
+}
+.border {
+  border: 2px solid var(--white);
+}
+.border-left {
+  border-left: 2px solid var(--white);
+}
+.border-right {
+  border-right: 2px solid var(--white);
+}
+.border-top {
+  border-top: 2px solid var(--white);
+}
+.border-bottom {
+  border-bottom: 2px solid var(--white);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.btn {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  margin-top: 30px;
+  padding: 10px 25px;
+  background-color: var(--secondary-color-dark);
+  color: var(--white);
+  cursor: pointer;
+}
+.btn-player1:disabled {
+  background-color: var(--secondary-color-light);
+}
+.btn-player2:disabled {
+  background-color: var(--secondary-color-light);
+}
+.btn-restart {
+  display: none;
+  margin-top: 20px;
+  justify-self: center;
+  height: 50px;
+  width: 60%;
+  background-color: #3ccf4e;
+}
